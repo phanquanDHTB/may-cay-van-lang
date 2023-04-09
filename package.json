@@ -1,18 +1,24 @@
 {
-  "name": "maycayvanlang",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
+    "name": "maycayvanlang",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "bootstrap": "^4.6.0",
+        "eslint": "8.37.0",
+        "eslint-config-next": "13.2.4",
+        "next": "13.2.4",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-icons": "^4.8.0",
+        "react-slick": "^0.29.0",
+        "sass": "^1.60.0",
+        "swiper": "^9.2.0"
+    }
 }

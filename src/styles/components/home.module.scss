@@ -93,7 +93,8 @@
                         left: 0;
                         margin-top: 35px;
                         padding: 10px;
-                        p {
+                        a {
+                            display: block;
                             font-weight: 400;
                             color: black;
                         }
@@ -102,7 +103,7 @@
                         }
                         &-ticket {
                             width: 200px;
-                            p {
+                            a {
                                 padding: 5px;
                                 &:hover {
                                     color: #00a8a9;
@@ -111,7 +112,7 @@
                         }
                         &-substore {
                             width: 300px;
-                            p {
+                            a {
                                 display: flex;
                                 align-items: center;
                                 padding: 5px;

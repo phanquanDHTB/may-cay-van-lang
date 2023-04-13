@@ -1,15 +1,15 @@
 import styles from "@/styles/components/carditem.module.scss";
 
-const CardItem = ({ infor }) => {
+const CardItem = ({ infor, callback = () => {} }) => {
     return (
-        <div className={styles["card-item-wrapp"]}>
+        <div className={styles["card-item-wrapp"]} onClick={() => callback(infor)}>
             <picture>
-                <img src="/images/ricardo-milos-1.jpg" alt="" />
+                <img src={infor?.listPath[0]} alt="" />
             </picture>
             <div className={styles["card-content"]}>
                 <p>{infor?.content}</p>
                 <div>
-                    <p>{infor?.date}</p>
+                    <p>{infor?.name}</p>
                     <hr />
                 </div>
             </div>

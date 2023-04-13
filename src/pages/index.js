@@ -11,8 +11,9 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Banner from "../components/Banner";
 import Head from "next/head";
-import "animate.css";
 import { listLink } from "@/utils/listLink";
+import ListProduct from "@/components/ListProduct";
+import InforProduct from "@/components/InforProduct";
 
 const Home = ({ children }) => {
     const companyRef = useRef();
@@ -30,6 +31,8 @@ const Home = ({ children }) => {
     useEffect(() => {
         typeWriter();
     }, []);
+
+    const [infor, setInfor] = useState();
     return (
         <>
             <div className={styles["home"]}>
@@ -135,6 +138,11 @@ const Home = ({ children }) => {
                                 </div>
                             </div>
                         </div>
+
+                        {infor && <InforProduct infor={infor} />}
+
+                        <h4 className={styles["product--title"]}>Các sản phẩm</h4>
+                        <ListProduct callback={setInfor} />
                     </div>
                 </div>
             </div>

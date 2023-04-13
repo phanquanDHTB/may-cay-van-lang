@@ -2,7 +2,6 @@
     max-width: 1200px;
     margin: 0 auto;
     height: 100vh;
-    // background: #ccc;
     &__wrap--banner {
         position: relative;
         .company--name {
@@ -68,9 +67,10 @@
             }
         }
         .home--main {
-            background: #ccc;
             border: 1px solid var(--primary);
-            height: 500px;
+            .product--title {
+                margin: 10px;
+            }
             &--header {
                 display: flex;
                 &-item {
@@ -79,6 +79,7 @@
                     padding: 10px 20px;
                     font-weight: 600;
                     cursor: pointer;
+                    border-bottom: 5px solid white;
                     &:hover {
                         border-bottom: 5px solid #00a8a9;
                         color: #00a8a9;

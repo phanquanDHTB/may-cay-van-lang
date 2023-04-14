@@ -6,6 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { SiZalo, SiGmail } from "react-icons/si";
+import { GoThreeBars } from "react-icons/go";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -33,6 +34,7 @@ const Home = ({ children }) => {
     }, []);
 
     const [infor, setInfor] = useState();
+    const [showSidebar, setShowSidebar] = useState(false);
     return (
         <>
             <div className={styles["home"]}>
@@ -40,6 +42,50 @@ const Home = ({ children }) => {
                     <h1 className={styles["company--name"]} ref={companyRef}></h1>
                     <div className={styles["logo"]}></div>
                     <Banner />
+                </div>
+                <div
+                    style={showSidebar ? { backgroundColor: "var(--primary" } : {}}
+                    className={styles["menu-button"]}
+                    onClick={() => setShowSidebar(!showSidebar)}
+                >
+                    <GoThreeBars />
+                </div>
+                <div className={`${styles["home--sidebar--mobile"]} ${showSidebar && styles["show"]}`}>
+                    <Link href={"/company-profile"}>
+                        <div className={styles["home--sidebar--item"]}>
+                            <BsFillFilePersonFill className={styles["profile"]} />
+                            <p>Hồ Sơ năng lực công ty</p>
+                        </div>
+                    </Link>
+                    <Link href={listLink.yb}>
+                        <div className={styles["home--sidebar--item"]}>
+                            <FaYoutube className={styles["youtube"]} />
+                            <p>Máy Cấy Lúa Văn Lang</p>
+                        </div>
+                    </Link>
+                    <Link href={listLink.fb}>
+                        <div className={styles["home--sidebar--item"]}>
+                            <BsFacebook className={styles["facebook"]} />
+                            <p>Máy Cấy Văn Lang</p>
+                        </div>
+                    </Link>
+                    <Link href={listLink.wa}>
+                        <div className={styles["home--sidebar--item"]}>
+                            <BsWhatsapp className={styles["whatsapp"]} />
+                            <p>WhatsApp +84 378 785 020</p>
+                        </div>
+                    </Link>
+                    <Link href={listLink.map}>
+                        <div className={styles["home--sidebar--item"]}>
+                            <CiLocationOn className={styles["location"]} />
+                            <p>
+                                Địa chỉ nhà máy : <br />
+                                <span>Cạnh cây xăng xã Lô Giang Huyện Đông Hưng Tỉnh Thái Bình Việt Nam</span>
+                                <br />
+                                <span>Email : robotcaylua@gmail.com</span>
+                            </p>
+                        </div>
+                    </Link>
                 </div>
                 <div className={styles["home__wrap--main"]}>
                     <div className={styles["home--sidebar"]}>

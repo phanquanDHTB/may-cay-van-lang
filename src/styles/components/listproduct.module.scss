@@ -4,3 +4,15 @@
     gap: 50px;
     padding: 10px;
 }
+
+@media only screen and (max-width: 960px) {
+    .list--product {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .list--product {
+        grid-template-columns: 1fr;
+    }
+}

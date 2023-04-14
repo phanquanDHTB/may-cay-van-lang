@@ -1,4 +1,4 @@
 const CompanyProfile = () => {
-    return <div>heheee</div>;
+    return <div></div>;
 };
 export default CompanyProfile;

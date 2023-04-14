@@ -2,6 +2,51 @@
     max-width: 1200px;
     margin: 0 auto;
     height: 100vh;
+    .menu-button {
+        display: none;
+    }
+    &--sidebar--mobile {
+        display: none;
+        height: 0;
+        overflow: hidden;
+        transition: height 1s;
+        a:first-child div {
+            border-top: 1px solid var(--primary);
+        }
+        .home--sidebar--item {
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid var(--primary);
+            border-right: 1px solid var(--primary);
+            border-left: 1px solid var(--primary);
+
+            &:hover {
+                p {
+                    color: #00a8a9;
+                }
+            }
+            p {
+                flex: 1;
+            }
+            span {
+                font-size: 0.7rem;
+                font-weight: 500;
+                z-index: -1;
+            }
+            svg {
+                font-size: 1rem;
+                margin-right: 10px;
+            }
+            p {
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+        }
+    }
     &__wrap--banner {
         position: relative;
         .company--name {
@@ -73,6 +118,7 @@
             }
             &--header {
                 display: flex;
+                flex-wrap: wrap;
                 &-item {
                     position: relative;
                     display: flex;
@@ -94,6 +140,8 @@
                         left: 0;
                         margin-top: 35px;
                         padding: 10px;
+                        z-index: 10;
+                        border: 1px solid var(--primary);
                         a {
                             display: block;
                             font-weight: 400;
@@ -112,7 +160,7 @@
                             }
                         }
                         &-substore {
-                            width: 300px;
+                            width: 250px;
                             a {
                                 display: flex;
                                 align-items: center;
@@ -145,4 +193,56 @@
 }
 .whatsapp {
     color: #28d468;
+}
+
+.show {
+    height: 270px;
+}
+
+@media only screen and (max-width: 1190px) {
+    .home {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-button {
+        display: block !important;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 3px;
+        margin: 10px 0;
+        margin-left: auto;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .home__wrap--main {
+        display: block;
+        .home--sidebar {
+            display: none;
+        }
+    }
+    .home--sidebar--mobile {
+        display: block;
+    }
+    .subnav {
+        p {
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+    }
+    .company--name {
+        left: 10px !important;
+        font-size: 1rem;
+    }
+    .logo {
+        width: 50px !important;
+        height: 50px !important;
+        right: 10px !important;
+    }
 }

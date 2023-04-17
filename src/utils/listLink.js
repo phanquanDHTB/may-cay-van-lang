@@ -1,4 +1,5 @@
 export const listLink = {
+    zalo: "https://zalo.me/0378785020",
     fb: "https://www.facebook.com/MayCayVanLang",
     yb: "https://www.youtube.com/@maycayluavanlang573",
     wa: "https://wa.me/+84378785020",

@@ -1,4 +1,5 @@
 import styles from "@/styles/components/carditem.module.scss";
+import { memo } from "react";
 
 const CardItem = ({ infor, callback = () => {}, setSelectProduct = () => {}, index, border }) => {
     return (
@@ -11,7 +12,7 @@ const CardItem = ({ infor, callback = () => {}, setSelectProduct = () => {}, ind
             style={border ? { border: "5px solid #00a8a9" } : {}}
         >
             <picture>
-                <img src={infor?.listPath[0]} alt="" />
+                <img src={infor?.listPath[0]} alt={infor?.name} />
             </picture>
             <div className={styles["card-content"]}>
                 <p>{infor?.content}</p>
@@ -24,4 +25,4 @@ const CardItem = ({ infor, callback = () => {}, setSelectProduct = () => {}, ind
     );
 };
 
-export default CardItem;
+export default memo(CardItem);

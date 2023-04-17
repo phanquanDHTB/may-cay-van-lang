@@ -146,9 +146,16 @@
                             display: block;
                             font-weight: 400;
                             color: black;
+                            font-size: 1rem;
                         }
                         &-infor {
-                            width: 200px;
+                            width: 210px;
+                            a {
+                                padding: 5px;
+                                &:hover {
+                                    color: #00a8a9;
+                                }
+                            }
                         }
                         &-ticket {
                             width: 200px;

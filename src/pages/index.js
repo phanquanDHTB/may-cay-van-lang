@@ -18,6 +18,8 @@ import InforProduct from "@/components/InforProduct";
 
 const Home = ({ children }) => {
     const companyRef = useRef();
+    const inforRef = useRef();
+
     let i = 0;
     const txt = "Van Lang Agriculture Machine";
     const speed = 100;
@@ -35,6 +37,14 @@ const Home = ({ children }) => {
 
     const [infor, setInfor] = useState();
     const [showSidebar, setShowSidebar] = useState(false);
+    const [location, setLocation] = useState("");
+    useEffect(() => {
+        setLocation(window.location.origin);
+    }, []);
+
+    useEffect(() => {
+        infor && inforRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, [infor]);
     return (
         <>
             <div className={styles["home"]}>
@@ -51,7 +61,7 @@ const Home = ({ children }) => {
                     <GoThreeBars />
                 </div>
                 <div className={`${styles["home--sidebar--mobile"]} ${showSidebar && styles["show"]}`}>
-                    <Link href={"/company-profile"}>
+                    <Link href={`${location}/pdf/hosonangluc.pdf`} target="_blank">
                         <div className={styles["home--sidebar--item"]}>
                             <BsFillFilePersonFill className={styles["profile"]} />
                             <p>Hồ Sơ năng lực công ty</p>
@@ -89,7 +99,7 @@ const Home = ({ children }) => {
                 </div>
                 <div className={styles["home__wrap--main"]}>
                     <div className={styles["home--sidebar"]}>
-                        <Link href={"/company-profile"}>
+                        <Link href={`${location}/pdf/hosonangluc.pdf`} target="_blank">
                             <div className={styles["home--sidebar--item"]}>
                                 <BsFillFilePersonFill className={styles["profile"]} />
                                 <p className="animate__animated animate__zoomIn">Hồ Sơ năng lực công ty</p>
@@ -128,13 +138,15 @@ const Home = ({ children }) => {
                     <div className={styles["home--main"]}>
                         <div className={styles["home--main--header"]}>
                             <div className={`${styles["home--main--header-item"]}`}>
-                                <p className="animate__animated animate__fadeInDown">Thông tin</p>
+                                <p className="animate__animated animate__fadeInDown">Công bố hợp chuẩn</p>
                                 <MdOutlineArrowDropDown />
                                 <div className={`${styles["subnav"]} ${styles["subnav-infor"]}`}>
-                                    <p>La cong ty uy tin blabla La cong ty uy tin blabla</p>
-                                    <p>La cong ty uy tin blabla</p>
-                                    <p>La cong ty uy tin blabla</p>
-                                    <p>La cong ty uy tin blabla</p>
+                                    <a href={`${location}/pdf/hopchuan.pdf`} target="_blank">
+                                        Hồ sơ công bố hợp chuẩn
+                                    </a>
+                                    <a href={`${location}/pdf/tiepnhan.pdf`} target="_blank">
+                                        Thông báo tiếp nhận hồ sơ
+                                    </a>
                                 </div>
                             </div>
                             <div className={`${styles["home--main--header-item"]}`}>
@@ -161,7 +173,7 @@ const Home = ({ children }) => {
                                 <p className="animate__animated animate__fadeInDown">Liên hệ</p>
                                 <MdOutlineArrowDropDown />
                                 <div className={`${styles["subnav"]} ${styles["subnav-substore"]}`}>
-                                    <a>
+                                    <a href={listLink.zalo}>
                                         <SiZalo className={styles["zalo"]} />
                                         <span>Zalo : +84 378 785 020</span>
                                     </a>
@@ -185,7 +197,7 @@ const Home = ({ children }) => {
                             </div>
                         </div>
 
-                        {infor && <InforProduct infor={infor} />}
+                        {infor && <InforProduct infor={infor} ref={inforRef} />}
 
                         <h4 className={styles["product--title"]}>Các sản phẩm</h4>
                         <ListProduct callback={setInfor} />

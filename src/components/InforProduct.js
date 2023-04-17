@@ -1,7 +1,9 @@
+/* eslint-disable react/display-name */
 import styles from "@/styles/components/inforproduct.module.scss";
-import { useEffect, useState } from "react";
+import { forwardRef, memo, useEffect, useState } from "react";
 
-const InforProduct = ({ infor }) => {
+const InforProduct = forwardRef((props, ref) => {
+    const { infor } = props;
     const [more, setMore] = useState(false);
 
     const [pathImg, setPathImg] = useState(infor?.listPath[0]);
@@ -9,11 +11,11 @@ const InforProduct = ({ infor }) => {
         setPathImg(infor?.listPath[0]);
     }, [infor]);
     return (
-        <div className={styles["infor--product--wrapp"]}>
+        <div ref={ref} className={styles["infor--product--wrapp"]}>
             <div className={styles["view--product"]}>
                 <div className={styles["main--image"]}>
                     <picture>
-                        <img alt="" src={pathImg} />
+                        <img alt={infor?.name} src={pathImg} />
                     </picture>
                 </div>
                 <div className={styles["list--image"]}>
@@ -23,7 +25,7 @@ const InforProduct = ({ infor }) => {
                             onClick={() => setPathImg(item)}
                             className={item === pathImg ? styles["select--image"] : ""}
                         >
-                            <img alt={""} src={item} />
+                            <img alt={infor?.name} src={item} />
                         </picture>
                     ))}
                 </div>
@@ -59,6 +61,6 @@ const InforProduct = ({ infor }) => {
             </div>
         </div>
     );
-};
+});
 
-export default InforProduct;
+export default memo(InforProduct);

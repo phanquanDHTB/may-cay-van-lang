@@ -67,25 +67,25 @@ const Home = ({ children }) => {
                             <p>Hồ Sơ năng lực công ty</p>
                         </div>
                     </Link>
-                    <Link href={listLink.yb}>
+                    <Link href={listLink.yb} target="_blank">
                         <div className={styles["home--sidebar--item"]}>
                             <FaYoutube className={styles["youtube"]} />
                             <p>Máy Cấy Lúa Văn Lang</p>
                         </div>
                     </Link>
-                    <Link href={listLink.fb}>
+                    <Link href={listLink.fb} target="_blank">
                         <div className={styles["home--sidebar--item"]}>
                             <BsFacebook className={styles["facebook"]} />
                             <p>Máy Cấy Văn Lang</p>
                         </div>
                     </Link>
-                    <Link href={listLink.wa}>
+                    <Link href={listLink.wa} target="_blank">
                         <div className={styles["home--sidebar--item"]}>
                             <BsWhatsapp className={styles["whatsapp"]} />
                             <p>WhatsApp +84 378 785 020</p>
                         </div>
                     </Link>
-                    <Link href={listLink.map}>
+                    <Link href={listLink.map} target="_blank">
                         <div className={styles["home--sidebar--item"]}>
                             <CiLocationOn className={styles["location"]} />
                             <p>
@@ -105,25 +105,25 @@ const Home = ({ children }) => {
                                 <p className="animate__animated animate__zoomIn">Hồ Sơ năng lực công ty</p>
                             </div>
                         </Link>
-                        <Link href={listLink.yb}>
+                        <Link href={listLink.yb} target="_blank">
                             <div className={styles["home--sidebar--item"]}>
                                 <FaYoutube className={styles["youtube"]} />
                                 <p className="animate__animated animate__backInLeft">Máy Cấy Lúa Văn Lang</p>
                             </div>
                         </Link>
-                        <Link href={listLink.fb}>
+                        <Link href={listLink.fb} target="_blank">
                             <div className={styles["home--sidebar--item"]}>
                                 <BsFacebook className={styles["facebook"]} />
                                 <p className="animate__animated animate__backInLeft">Máy Cấy Văn Lang</p>
                             </div>
                         </Link>
-                        <Link href={listLink.wa}>
+                        <Link href={listLink.wa} target="_blank">
                             <div className={styles["home--sidebar--item"]}>
                                 <BsWhatsapp className={styles["whatsapp"]} />
                                 <p className="animate__animated animate__backInLeft">WhatsApp +84 378 785 020</p>
                             </div>
                         </Link>
-                        <Link href={listLink.map}>
+                        <Link href={listLink.map} target="_blank">
                             <div className={styles["home--sidebar--item"]}>
                                 <CiLocationOn className={styles["location"]} />
                                 <p className="animate__animated animate__backInLeft">
@@ -141,12 +141,12 @@ const Home = ({ children }) => {
                                 <p className="animate__animated animate__fadeInDown">Công bố hợp chuẩn</p>
                                 <MdOutlineArrowDropDown />
                                 <div className={`${styles["subnav"]} ${styles["subnav-infor"]}`}>
-                                    <a href={`${location}/pdf/hopchuan.pdf`} target="_blank">
+                                    <Link href={`${location}/pdf/hopchuan.pdf`} target="_blank">
                                         Hồ sơ công bố hợp chuẩn
-                                    </a>
-                                    <a href={`${location}/pdf/tiepnhan.pdf`} target="_blank">
+                                    </Link>
+                                    <Link href={`${location}/pdf/tiepnhan.pdf`} target="_blank">
                                         Thông báo tiếp nhận hồ sơ
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className={`${styles["home--main--header-item"]}`}>
@@ -173,15 +173,15 @@ const Home = ({ children }) => {
                                 <p className="animate__animated animate__fadeInDown">Liên hệ</p>
                                 <MdOutlineArrowDropDown />
                                 <div className={`${styles["subnav"]} ${styles["subnav-substore"]}`}>
-                                    <a href={listLink.zalo}>
+                                    <a href={listLink.zalo} target="_blank">
                                         <SiZalo className={styles["zalo"]} />
                                         <span>Zalo : +84 378 785 020</span>
                                     </a>
-                                    <a href={listLink.yb}>
+                                    <a href={listLink.yb} target="_blank">
                                         <FaYoutube className={styles["youtube"]} />
                                         <span>Máy Cấy Lúa Văn Lang</span>
                                     </a>
-                                    <a href={listLink.wa}>
+                                    <a href={listLink.wa} target="_blank">
                                         <BsWhatsapp className={styles["whatsapp"]} />
                                         <span>Whatsapp : +84 378 785 020</span>
                                     </a>
@@ -189,7 +189,7 @@ const Home = ({ children }) => {
                                         <SiGmail />
                                         <span>Gmail: robotcaylua@gmail.com</span>
                                     </a>
-                                    <a href={listLink.fb}>
+                                    <a href={listLink.fb} target="_blank">
                                         <BsFacebook className={styles["facebook"]} />
                                         <span>Máy Cấy Văn Lang</span>
                                     </a>

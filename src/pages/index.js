@@ -141,10 +141,10 @@ const Home = ({ children }) => {
                                 <p className="animate__animated animate__fadeInDown">Công bố hợp chuẩn</p>
                                 <MdOutlineArrowDropDown />
                                 <div className={`${styles["subnav"]} ${styles["subnav-infor"]}`}>
-                                    <Link href={`${location}/pdf/hopchuan.pdf`} target="_blank">
+                                    <Link href={`${location}/pdf/hopchuan.PDF`} target="_blank">
                                         Hồ sơ công bố hợp chuẩn
                                     </Link>
-                                    <Link href={`${location}/pdf/tiepnhan.pdf`} target="_blank">
+                                    <Link href={`${location}/pdf/tiepnhan.PDF`} target="_blank">
                                         Thông báo tiếp nhận hồ sơ
                                     </Link>
                                 </div>

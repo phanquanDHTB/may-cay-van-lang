@@ -15,6 +15,7 @@ import Head from "next/head";
 import { listLink } from "@/utils/listLink";
 import ListProduct from "@/components/ListProduct";
 import InforProduct from "@/components/InforProduct";
+import { listImage } from "@/utils/listImage";
 
 const Home = ({ children }) => {
     const companyRef = useRef();
@@ -35,7 +36,7 @@ const Home = ({ children }) => {
         typeWriter();
     }, []);
 
-    const [infor, setInfor] = useState();
+    const [infor, setInfor] = useState(listImage[0]);
     const [showSidebar, setShowSidebar] = useState(false);
     const [location, setLocation] = useState("");
     useEffect(() => {
@@ -61,10 +62,10 @@ const Home = ({ children }) => {
                     <GoThreeBars />
                 </div>
                 <div className={`${styles["home--sidebar--mobile"]} ${showSidebar && styles["show"]}`}>
-                    <Link href={`${location}/pdf/hosonangluc.pdf`} target="_blank">
+                    <Link href={`${location}/pdf/hopchuan-new.pdf`} target="_blank">
                         <div className={styles["home--sidebar--item"]}>
                             <BsFillFilePersonFill className={styles["profile"]} />
-                            <p>Hồ Sơ năng lực công ty</p>
+                            <p>Công bố hợp chuẩn</p>
                         </div>
                     </Link>
                     <Link href={listLink.yb} target="_blank">
@@ -99,10 +100,10 @@ const Home = ({ children }) => {
                 </div>
                 <div className={styles["home__wrap--main"]}>
                     <div className={styles["home--sidebar"]}>
-                        <Link href={`${location}/pdf/hosonangluc.pdf`} target="_blank">
+                        <Link href={`${location}/pdf/hopchuan-new.pdf`} target="_blank">
                             <div className={styles["home--sidebar--item"]}>
                                 <BsFillFilePersonFill className={styles["profile"]} />
-                                <p className="animate__animated animate__zoomIn">Hồ Sơ năng lực công ty</p>
+                                <p className="animate__animated animate__zoomIn">Công bố hợp chuẩn</p>
                             </div>
                         </Link>
                         <Link href={listLink.yb} target="_blank">
@@ -137,18 +138,11 @@ const Home = ({ children }) => {
                     </div>
                     <div className={styles["home--main"]}>
                         <div className={styles["home--main--header"]}>
-                            <div className={`${styles["home--main--header-item"]}`}>
-                                <p className="animate__animated animate__fadeInDown">Công bố hợp chuẩn</p>
-                                <MdOutlineArrowDropDown />
-                                <div className={`${styles["subnav"]} ${styles["subnav-infor"]}`}>
-                                    <Link href={`${location}/pdf/hopchuan.PDF`} target="_blank">
-                                        Hồ sơ công bố hợp chuẩn
-                                    </Link>
-                                    <Link href={`${location}/pdf/tiepnhan.PDF`} target="_blank">
-                                        Thông báo tiếp nhận hồ sơ
-                                    </Link>
+                            <a href={`${location}/pdf/hosonangluc.pdf`} target="_blank">
+                                <div className={`${styles["home--main--header-item"]}`}>
+                                    <p className="animate__animated animate__fadeInDown">Thông tin</p>
                                 </div>
-                            </div>
+                            </a>
                             <div className={`${styles["home--main--header-item"]}`}>
                                 <p className="animate__animated animate__fadeInDown">Bảo hộ</p>
                                 <MdOutlineArrowDropDown />

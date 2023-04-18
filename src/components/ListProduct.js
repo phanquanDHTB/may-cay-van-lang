@@ -4,7 +4,7 @@ import { listImage } from "@/utils/listImage";
 import { useState } from "react";
 
 const ListProduct = ({ callback = () => {} }) => {
-    const [selectProduct, setSelectProduct] = useState();
+    const [selectProduct, setSelectProduct] = useState(0);
     return (
         <div className={styles["list--product"]}>
             {listImage.map((item, index) => (

@@ -66,12 +66,11 @@
 html,
 body {
     width: 100vw;
-    height: 100vh;
+    overflow-x: hidden;
 }
 
 #__next {
     width: 100vw;
-    height: 100vh;
 }
 
 body {

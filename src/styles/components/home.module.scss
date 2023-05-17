@@ -1,7 +1,7 @@
 .home {
     max-width: 1200px;
     margin: 0 auto;
-    height: 100vh;
+    padding-bottom: 30px;
     .menu-button {
         display: none;
     }
@@ -51,7 +51,7 @@
         position: relative;
         .company--name {
             position: absolute;
-            color: white;
+            // color: white;
             top: 50%;
             left: 50px;
             transform: translateY(-50%);

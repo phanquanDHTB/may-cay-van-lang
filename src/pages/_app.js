@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <link rel="icon" href="../../images/ricardo-milos-1.jpg" />
+                <link rel="icon" href="../../images/anhbia.jpg" />
                 <title>Van Lang Agriculture Machine</title>
                 <meta charset="UTF-8" />
                 <meta name="description" content="Van Lang Agriculture Machine" />

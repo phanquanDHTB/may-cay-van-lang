@@ -15,7 +15,7 @@ const Banner = () => {
         <Slider {...settingsBanner}>
             <div className={styles["banner-item"]}>
                 <picture>
-                    <img src="/images/ricardo-milos-1.jpg" alt="" />
+                    <img src="/images/anhbia.jpg" alt="" />
                 </picture>
             </div>
         </Slider>

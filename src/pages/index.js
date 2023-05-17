@@ -39,13 +39,14 @@ const Home = ({ children }) => {
     const [infor, setInfor] = useState(listImage[0]);
     const [showSidebar, setShowSidebar] = useState(false);
     const [location, setLocation] = useState("");
+    const [firt, setFirt] = useState(0);
     useEffect(() => {
         setLocation(window.location.origin);
     }, []);
 
     useEffect(() => {
-        infor && inforRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, [infor]);
+        infor && firt === 1 && inforRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, [infor, firt]);
     return (
         <>
             <div className={styles["home"]}>
@@ -147,20 +148,20 @@ const Home = ({ children }) => {
                                 <p className="animate__animated animate__fadeInDown">Bảo hộ</p>
                                 <MdOutlineArrowDropDown />
                                 <div className={`${styles["subnav"]} ${styles["subnav-ticket"]}`}>
+                                    {/* <p>Van bang 1</p>
                                     <p>Van bang 1</p>
                                     <p>Van bang 1</p>
-                                    <p>Van bang 1</p>
-                                    <p>Van bang 1</p>
+                                    <p>Van bang 1</p> */}
                                 </div>
                             </div>
                             <div className={`${styles["home--main--header-item"]}`}>
                                 <p className="animate__animated animate__fadeInDown">Hệ thống đại lý các nước</p>
                                 <MdOutlineArrowDropDown />
                                 <div className={`${styles["subnav"]} ${styles["subnav-substore"]}`}>
-                                    <p>La cong ty uy tin blabla La cong ty uy tin blabla</p>
+                                    {/* <p>La cong ty uy tin blabla La cong ty uy tin blabla</p> */}
+                                    {/* <p>La cong ty uy tin blabla</p>
                                     <p>La cong ty uy tin blabla</p>
-                                    <p>La cong ty uy tin blabla</p>
-                                    <p>La cong ty uy tin blabla</p>
+                                    <p>La cong ty uy tin blabla</p> */}
                                 </div>
                             </div>
                             <div className={`${styles["home--main--header-item"]}`}>
@@ -194,7 +195,12 @@ const Home = ({ children }) => {
                         {infor && <InforProduct infor={infor} ref={inforRef} />}
 
                         <h4 className={styles["product--title"]}>Các sản phẩm</h4>
-                        <ListProduct callback={setInfor} />
+                        <ListProduct
+                            callback={(v) => {
+                                setInfor(v);
+                                setFirt(1);
+                            }}
+                        />
                     </div>
                 </div>
             </div>

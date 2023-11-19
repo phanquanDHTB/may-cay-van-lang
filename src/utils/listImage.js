@@ -1,11 +1,11 @@
 export const listImage = [
     {
         listPath: [
-            "/images/4x20/1.png",
-            "/images/4x20/4x20.JPG",
-            "/images/4x20/IMG_6271.png",
-            "/images/4x20/IMG_6274.png",
-            "/images/4x20/IMG_6275.png",
+            "/images/4x20/1.jpg",
+            "/images/4x20/4x20.jpg",
+            "/images/4x20/IMG_6271.jpg",
+            "/images/4x20/IMG_6274.jpg",
+            "/images/4x20/IMG_6275.jpg",
         ],
         name: "Máy cấy 4 hàng x 20cm",
         infor: [
@@ -19,12 +19,12 @@ export const listImage = [
     },
     {
         listPath: [
-            "/images/18/1.png",
-            "/images/18/18.JPG",
-            "/images/18/IMG_6246.png",
-            "/images/18/IMG_6249.png",
-            "/images/18/IMG_6251.png",
-            "/images/18/IMG_6254.png",
+            "/images/18/1.jpg",
+            "/images/18/18.jpg",
+            "/images/18/IMG_6246.jpg",
+            "/images/18/IMG_6249.jpg",
+            "/images/18/IMG_6251.jpg",
+            "/images/18/IMG_6254.jpg",
         ],
         name: "Máy cấy 6 hàng x 18cm",
         infor: [
@@ -38,13 +38,13 @@ export const listImage = [
     },
     {
         listPath: [
-            "/images/20/1.png",
-            "/images/20/20.JPG",
-            "/images/20/200.JPG",
-            "/images/20/IMG_6277.png",
-            "/images/20/IMG_6278.png",
-            "/images/20/IMG_6280.png",
-            "/images/20/Layer 1.png",
+            "/images/20/1.jpg",
+            "/images/20/20.jpg",
+            "/images/20/200.jpg",
+            "/images/20/IMG_6277.jpg",
+            "/images/20/IMG_6278.jpg",
+            "/images/20/IMG_6280.jpg",
+            "/images/20/Layer 1.jpg",
         ],
         name: "Máy cấy 6 hàng x 20cm",
         infor: [
@@ -58,13 +58,13 @@ export const listImage = [
     },
     {
         listPath: [
-            "/images/23/1.png",
-            "/images/23/23.JPG",
-            "/images/23/IMG_6238.png",
-            "/images/23/IMG_6239.png",
-            "/images/23/IMG_6240.png",
-            "/images/23/IMG_6242.png",
-            "/images/23/IMG_6243.png",
+            "/images/23/1.jpg",
+            "/images/23/23.jpg",
+            "/images/23/IMG_6238.jpg",
+            "/images/23/IMG_6239.jpg",
+            "/images/23/IMG_6240.jpg",
+            "/images/23/IMG_6242.jpg",
+            "/images/23/IMG_6243.jpg",
         ],
         name: "Máy cấy 6 hàng x 23.5cm",
         infor: [
@@ -78,11 +78,11 @@ export const listImage = [
     },
     {
         listPath: [
-            "/images/28/1.png",
-            "/images/28/IMG_6257.png",
-            "/images/28/IMG_6263.png",
-            "/images/28/IMG_6265.png",
-            "/images/28/IMG_6267.png",
+            "/images/28/1.jpg",
+            "/images/28/IMG_6257.jpg",
+            "/images/28/IMG_6263.jpg",
+            "/images/28/IMG_6265.jpg",
+            "/images/28/IMG_6267.jpg",
         ],
         name: "Máy cấy 4 hàng x 28cm",
         infor: [
